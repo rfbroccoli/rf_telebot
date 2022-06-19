@@ -2,9 +2,10 @@ package bot
 
 // const spreadsheet = "https://docs.google.com/spreadsheets/d/1MmlNT2h_fqvz8Oj2SEhwJvPIR54-nWo__M8LmqVthTo/edit?usp=sharing"
 
-const groupString = "t.me/rf_bot_joi \n \n/help - 📃 command list ပြပါ \n/register - 💾 register လုပ်ရန်\n/when - ⏳ လာမယ့်အတန်းက ဘယ်တော့လဲ?\n /attendance - 🗒 attendance ဖြည့်ရန် spreadsheet"
-const privateString = "t.me/rf_bot_joi \n \n/help - 📃 command list ပြပါ \n/when - ⏳ လာမယ့်အတန်းက ဘယ်တော့လဲ?\n/attendance - 🗒 attendance ဖြည့်ရန် spreadsheet"
-const attendanceString = "spreadsheet link:\nhttps://docs.google.com/spreadsheets/d/1MmlNT2h_fqvz8Oj2SEhwJvPIR54-nWo__M8LmqVthTo/edit?usp=sharing\n"
+const privateString = "t.me/rfbroccoli_bot \n \n/help - 📃 command list ပြပါ \n/register - 💾 register လုပ်ရန်\n/when - ⏳ လာမယ့်အတန်းက ဘယ်တော့လဲ?\n /attendance - 🗒 attendance ဖြည့်ရန် spreadsheet"
+const groupString = "t.me/rfbroccoli_bot \n \n/help - 📃 command list ပြပါ \n/when - ⏳ လာမယ့်အတန်းက ဘယ်တော့လဲ?\n/attendance - 🗒 attendance ဖြည့်ရန် spreadsheet"
+const attendanceString = "🗒 spreadsheet link:\nhttps://docs.google.com/spreadsheets/d/1MmlNT2h_fqvz8Oj2SEhwJvPIR54-nWo__M8LmqVthTo/edit?usp=sharing\n"
+const noRegisterString = "❌ privacy အရ group ထဲမှာ register ပေးမလုပ်ပါ။\nregister လုပ်ရန် private chat ကိုလာပါ t.me/rfbroccoli_bot"
 
 type Class struct {
 	ClassName   string `json:"class_name,omitempty"`

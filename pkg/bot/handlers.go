@@ -12,9 +12,17 @@ import (
 
 var helloArray = [4]string{"hello", "hi", "hey", "ဟယ်လို"}
 
+func startHandler(ctx tele.Context) error {
+	sender := ctx.Message().Sender
+	hello := fmt.Sprintf("hello %v %v", sender.FirstName, sender.LastName)
+	ctx.Send(hello)
+	ctx.Send("ဘယ်လိုကူညီပေးရမလဲ")
+	return helpHandler(ctx)
+}
+
 func registerHandler(ctx tele.Context) error {
 	if ctx.Chat().Type != tele.ChatPrivate {
-		return ctx.Send("❌ privacy အရ group ထဲမှာ register ပေးမလုပ်ပါ။\nregister လုပ်ရန် private chat ကိုလာပါ t.me/rf_bot_joi")
+		return ctx.Send(noRegisterString)
 	}
 	msg := ctx.Message()
 	sender := msg.Sender

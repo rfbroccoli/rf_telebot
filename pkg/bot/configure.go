@@ -5,6 +5,7 @@ import (
 )
 
 func ConfigureCommands(bot *tele.Bot) {
+	bot.Handle("/start", startHandler)
 	bot.Handle("/register", registerHandler)
 	bot.Handle("/when", whenHandler)
 	bot.Handle("/help", helpHandler)

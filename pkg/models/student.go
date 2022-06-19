@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"log"
+	"os"
 	"time"
 
 	"github.com/pwhb/rf_telebot/pkg/config"
@@ -37,8 +38,10 @@ func init() {
 	if err != nil {
 		log.Panicln(err)
 	}
-	db := c.Database("test")
-	studentCol = db.Collection("b17_students")
+	dbName := os.Getenv("DB_NAME")
+	colName := os.Getenv("COLLECTION")
+	db := c.Database(dbName)
+	studentCol = db.Collection(colName)
 	log.Println("database connected")
 }
 
